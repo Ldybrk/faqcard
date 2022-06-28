@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+body {
+  background: linear-gradient(rgb(195, 161, 249), rgb(110, 24, 247));
+}
+.container {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  width: 50vw;
+  height: 60vh;
+  margin: 10vw auto 0;
+  background-color: white;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 0;
+}
+
+/* Images  */
+.illustration {
+  width: 45%;
+  height: 100%;
+  display: flex;
+
+  background-image: url(illustration-woman-online-desktop.svg),
+    url(bg-pattern-desktop.svg);
+  background-position: center left -4rem, bottom 30% right 4rem;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 200%;
+}
+
+.boxIllustration {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(0, -30%);
+}
+
+/* FAQS */
+
+.faqs-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 3rem;
+  width: 40%;
+  float: right;
+}
+
+.faqHead {
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.faq1,
+.faq2,
+.faq3,
+.faq4,
+.faq5 {
+  font-size: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(131, 131, 131);
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.faq1:hover,
+.faq2:hover,
+.faq3:hover,
+.faq4:hover,
+.faq5:hover {
+  color: orange;
+}
+
+.clicked {
+  transform: rotate(180deg);
+}
+
+.notClicked {
+  transform: rotate(0deg);
+}
+
+.Q1 button,
+.Q2 button,
+.Q3 button,
+.Q4 button,
+.Q5 button {
+  border: none;
+  background-color: white;
+  float: right;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+#answer1,
+#answer2,
+#answer3,
+#answer4,
+#answer5 {
+  display: none;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(131, 131, 131);
+}
+
+/* Attribution - FrontEnd Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+  }
+
+  .faqs-container {
+    display: block;
+    width: 90%;
+    float: right;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .faq1,
+  .faq2,
+  .faq3,
+  .faq4,
+  .faq5 {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .faqHead {
+    text-align: center;
+  }
+
+  .boxIllustration {
+    position: absolute;
+    top: 17.5%;
+    left: -10%;
+    width: 50%;
+  }
+
+  .boxIllustration img {
+    width: 100%;
+    height: 100%;
+  }
+  .illustration {
+    position: absolute;
+    background-image: url(illustration-woman-online-desktop.svg),
+      url(bg-pattern-desktop.svg);
+    background-position: center top 12.5%, center top 10%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
+  }
+}
